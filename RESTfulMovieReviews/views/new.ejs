@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+<div class="container">
+	<form action="/movies" method="POST">
+	  <div class="form-group">
+		<label for="title-input">Title</label>
+		<input type="text" class="form-control" id="title-input" placeholder="Title" name="movie[title]">
+	  </div>
+	  <div class="form-group">
+		<label for="image-input">Image</label>
+		 <input type="text" class="form-control" id="image-input" placeholder="Image" name="movie[image]">
+	  </div>
+	  <div class="form-group">
+		<label for="review-textarea">Review</label>
+		<textarea class="form-control" id="review-textarea" rows="3" placeholder="Enter review here..." name="movie[review]"></textarea>
+	  </div>
+	  <button>
+		  Submit
+		</button>
+	</form>
+</div>
+<% include partials/footer %>

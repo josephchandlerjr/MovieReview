@@ -1,0 +1,18 @@
+<% include partials/header %>
+<div class="container">
+	<div class="card" style="width: 18rem;">
+	  <img class="card-img-top" src="<%= movie.image %>" alt="Card image cap">
+	  <div class="card-body">
+		  <h5 class="card-title"><%= movie.title%></h5>
+		<div class="card-body">
+			<p class="card-text"><%= movie.review %></p>
+			<a href="/movies/<%= movie._id%>/edit" class="card-link btn btn-primary">Edit</a>
+			<form id="delete" action="/movies/<%= movie._id%>?_method=DELETE" method="POST">
+				<button type="submit" class="btn btn-danger">DELETE</button>
+			</form>
+  		</div>
+	  </div>
+	</div>
+
+</div>
+<% include partials/footer%>
